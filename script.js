@@ -17,13 +17,12 @@ const showBill = () => {
 }
 
 const countBill = () => { 
-    const newPrice = parseInt(price.value);
+    const newPrice = parseFloat(price.value);
     const newPeople = parseInt(people.value);
     const newTip = parseFloat(tip.value);
-
     const sum = (newPrice + newPrice * newTip) / newPeople;
-    costInfo.style.display = 'block'
 
+    costInfo.style.display = 'block'
     cost.textContent = sum.toFixed(2)
  }
 
